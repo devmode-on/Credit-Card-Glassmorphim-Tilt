@@ -1,0 +1,119 @@
+/* ------------ VARIABLES ------------ */
+:root{
+  /* FONT */
+  --font: 'Courier New', Courier, monospace;
+
+  /* COLORS */
+  --color: #ffffffb9;
+  --bg-color: #06092d;
+  --gradient-color: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+}
+
+/* ------------ BASE ------------ */
+*{
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: var(--font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+
+body::before{
+  content: '';
+  width: 22em;
+  height: 22em;
+  background-image: var(--gradient-color);
+  border-radius: 50%;
+
+  position: absolute;
+  transform: translate(-200px, -100px);
+}
+
+body::after{
+  content: '';
+  width: 15em;
+  height: 15em;
+  background-image: var(--gradient-color);
+  border-radius: 50%;
+
+  position: absolute;
+  transform: translate(150px, 100px);
+}
+
+/* ----------- CARD ------------- */
+.card{
+  width: 30em;
+  height: 18em;
+  background-color: rgba(255, 255, 255, .2);
+  border-radius: 2em;
+  box-shadow: 0 0 1em rgba(0,0,0, .2);
+  border: 1px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(30px);
+  color: var(--color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: relative;
+  z-index: 1;
+
+  overflow: hidden;
+}
+
+.card__bank-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5em;
+}
+
+.card__bank-name{
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.card__img{
+  width: 5em;
+  height: 2em;
+}
+
+.card__number{
+  width: 80%;
+  margin: auto;
+  font-size: 2rem;
+  font-weight: 500;
+
+  position: relative;
+  top: 1em;
+}
+
+.card__details{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2em;
+}
+
+.card__name{
+  font-size: 1.5rem;
+}
+
+.card__expiration{
+  display: flex;
+  flex-direction: column;
+
+  font-size: .7rem;
+}
+
+.card__expiration--date{
+  font-size: 1.3rem;
+}

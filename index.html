@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Card Glassmorphism |Dev Mode</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+<body>
+
+  <div class="card">
+    <div class="card__bank-info">
+      <span class="card__bank-name">Bank</span>
+      <img src="/images/visa.svg" alt="Visa Logo" class="card__img">
+    </div>
+
+    <div class="card__number"><span>4526 8314 5278 6548</span></div>
+
+    <div class="card__details">
+      <span class="card__name">Sara Smith</span>
+
+      <div class="card__expiration">
+        <span>Valid Thru</span>
+        <span class="card__expiration--date">03/25</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script type="text/javascript" src="/js/vanilla-tilt.min.js"></script>
+
+  <script>
+    VanillaTilt.init(document.querySelector(".card"), {
+		  max: 20,
+		  speed: 400,
+      glare: true,
+      "max-glare": 1,
+	  });
+  </script>
+
+</body>
+</html>
